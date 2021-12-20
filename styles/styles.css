@@ -1,0 +1,38 @@
+:root{
+    --var-color-primario: #4618AC;
+    --var-color-secundario: #93c178;
+    --var-color-terciario: #465c8B;
+    --var-color-titulos: ;
+    --var-color-resaltado: ;
+    --var-color-tranparente: ;
+    --var-color-body: #5816f1;
+}
+
+.background_header {
+    background-color: var(--var-color-primario);
+}
+
+.background_body{
+    background-color: var(--var-color-body);
+}
+.my-carrousel img{
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-img-top{
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-text{
+    height: 150px;
+}
+
+.productos_destacados{
+    display: flex;
+    justify-content: space-evenly;
+}
