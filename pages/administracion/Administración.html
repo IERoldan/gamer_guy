@@ -157,7 +157,7 @@
                         <div class="modal-body">
                             <form>
                                 <div class="mb-3 w-75 mx-auto">
-                                    <label for="full-name" class="form-label">Codigo</label>
+                                    <label for="full-name" class="form-label">Código</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-barcode"></i>
@@ -177,7 +177,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
-                                    <label for="email" class="form-label">Categoria</label>
+                                    <label for="email" class="form-label">Categoría</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-tags"></i>
@@ -190,15 +190,15 @@
                                     <label for="password" class="form-label">Descripción</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
-                                            <i class="fas fa-lock"></i>
+                                            <i class="far fa-comment-dots"></i>
                                         </span>
                                         <input type="Descripción" class="form-control" id="Descripción"
                                             aria-describedby="emailHelp">
                                     </div>
                                 </div>
                                 <div class="mb-3 form-check w-75 mx-auto">
-                                    <input type="checkbox" class="form-check-input" id="suscription" name="suscription">
-                                    <label class="form-check-label" for="suscription">Publicar</label>
+                                    <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
+                                    <label class="form-check-label" for="Publicado">Publicar</label>
                                 </div>
                                 <!-- BOTON PARA REGISTRARSE CON REDES -->
                                 <div class="mb-3 w-75 mx-auto">
@@ -222,7 +222,49 @@
                     </div>
                 </div>
             </div>
+            <div class="row d-flex">
+                <!-- TABLA -->
+                <div class="col-12">
+                    <table class="table table-ivan table-hover">
+                        <thead class="text-white">
+                            <tr>
+                                <th scope="col" class="text-center"><i class="fas fa-barcode"></i> Código</th>
+                                <th scope="col" class="text-center"><i class="fas fa-gamepad"></i> Nombre</th>
+                                <th scope="col" class="text-center"><i class="fas fa-tags"></i> Categoría</th>
+                                <th scope="col" class="text-center"><i class="far fa-comment-dots"></i> Descripción</th>
+                                <th scope="col" class="text-center"><i class="fas fa-eye"></i> Publicado</th>
+                                <th scope="col" class="text-center"><i class="fas fa-tasks"></i> Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-white">
+                            <!-- SALUD -->
+                            <tr class="text-center">
+                                <td scope="row">
+                                    <p>001</p>
+                                </td>
+                                <td>
+                                    <p>God of War</p>
+                                </td>
+                                <td>
+                                    <p>Guerra</p>
+                                </td>
+                                <td>
+                                    <p>Es un  juego de guerra</p>
+                                </td>
+                                <td>
+                                    <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
+                                    <button type="button" class="btn btn-warning btn-sm"><i class="far fa-edit"></i></button>
+                                    <button type="button" class="btn btn-success btn-sm"><i class="fas fa-star"></i></button>
+                                </td>
+                            </tr>
+                           
 
+                        </tbody>
+                    </table>
+                </div>
 
         </div>
 
