@@ -7,6 +7,9 @@
     --var-color-tranparente: ;
     --var-color-body: #5816f1;
 }
+body{
+    font-family: 'Roboto', sans-serif;
+}
 
 .background_header {
     background-color: var(--var-color-primario);
@@ -35,4 +38,20 @@
 .productos_destacados{
     display: flex;
     justify-content: space-evenly;
+}
+
+.footer{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #4618AC;
+    margin-top: 10px;
+}
+.logos{
+    color: white;
+}
+.icono{
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px;
 }

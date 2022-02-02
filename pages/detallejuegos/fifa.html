@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/gamer_guy_logo_2.png">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles/contacto.css">
+    <link rel="stylesheet" href="/styles/juegos.css">
+    <title>FIFA 22</title>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <!-- =================================
+                                ==			  NAVEGADOR			   ==
+                                ================================= -->
+        <nav class="navbar p-0 navbar-expand-lg navbar-light background_header">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a class="navbar-brand p-0" href="/index.html">
+                    <img src="/assets/gamer_guy_logo_2.png" alt="Gamer Guy" width="60" height="60"
+                        class="d-inline-block align-text-center">
+
+                </a>
+                <!-- BUSCADOR -->
+                <form class="d-flex d-none d-lg-inline-flex">
+                    <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-white text-white" type="submit"><i
+                            class="fas fa-search"></i></button>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- BOTONES Y COLAPSE -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page"
+                                href="/pages/acerca_de_nosotros/acerca_de_nosotros.html">Acerca de
+                                nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page"
+                                href="/pages/contactenos/contactenos.html">Contáctenos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#" data-bs-toggle="modal"
+                                data-bs-target="#abrirModal">Suscríbete</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page"
+                                href="/pages/registrese/registrese.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+    <!-- =================================
+            ==			  MODAL			   ==
+            ================================= -->
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="abrirModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- CABECERA DEL MODAL -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- CUERPO DEL MODAL -->
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3 w-75 mx-auto">
+                            <label for="full-name" class="form-label">Nombre y Apellido</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-primary text-white" id="basic-addon1">
+                                    <i class="fas fa-users"></i>
+                                </span>
+                                <input type="text" class="form-control" id="full-name" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="mb-3 w-75 mx-auto input-group">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-primary text-white" id="basic-addon1">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </span>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="mb-3 w-75 mx-auto">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-primary text-white" id="basic-addon1">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input type="password" class="form-control" id="password" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check w-75 mx-auto">
+                            <input type="checkbox" class="form-check-input" id="suscription" name="suscription">
+                            <label class="form-check-label" for="suscription">Recibir promociones</label>
+                        </div>
+                        <!-- BOTON PARA REGISTRARSE CON REDES -->
+                        <div class="mb-3 w-75 mx-auto">
+                            <!-- FACEBOOK -->
+                            <button type="button" class="btn facebook-bg text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <!-- GOOGLE -->
+                            <button type="button" class="btn gmail-bg text-white">
+                                <i class="fab fa-google"></i>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- PIE DEL MODAL -->
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedorP">
+        <div class="contenedorI">
+            <img src="/assets/image/fifa22Co.webp" class="imagen">
+        </div>
+        <section class="contenedorD">
+            <div>
+                <h1>FIFA 22 (ENG) (PC)</h1>
+                <div>
+                    <ion-icon class="icon1" width="30px" name="star"></ion-icon>
+                    <ion-icon class="icon1" width="30px" name="star"></ion-icon>
+                    <ion-icon class="icon1" width="30px" name="star"></ion-icon>
+                    <ion-icon class="icon1" width="30px" name="star"></ion-icon>
+                    <ion-icon class="icon1" name="star-half"></ion-icon>
+                </div>
+            </div>
+            <div>
+                <h2 class="subtitulo">Sobre este juego</h2>
+                <br>
+                <h3>FIFA 22 es un videojuego q solo crea enfados basado en fútbol desarrollado por EA Vancouver y EA
+                    Romania, siendo publicado por EA Sports. Está disponible para PlayStation 4, PlayStation 5, Xbox
+                    Series X/S, Xbox One, Microsoft Windows, Google Stadia y Nintendo Switch. Es la vigésimo novena
+                    entrega en la serie FIFA y fue lanzado el 1 de octubre de manera global.
+                    <br>
+
+                    El primer tráiler del juego fue presentado el día 11 de julio de 20214​ y muestra la nueva
+                    tecnología Hypermotion, que según palabras de EA brindará nueva experiencia más realista. Estas
+                    innovaciones están disponibles únicamente para PlayStation 5, Xbox Series y Stadia.
+                    <br>
+                    Kylian Mbappé será el rostro de la portada por segunda vez consecutiva.
+                </h3>
+            </div>
+        </section>
+    </div>
+    <div class="contenedorC">
+        <div class="contCompra">
+            <div class="card compra" style="width: 18rem; height: 18rem;">
+                <div class="card-body">
+                    <h1 class="precio card-title">¡Oferta!</h1>
+                    <div class="d-flex">
+                        <h5 class="card-title precio"><s>US$49</s></h5>
+                        <h1 class="precio">US$30</h1>
+                    </div>
+                    <a href="#" type="button" class="btn btn-warning">Comprar ahora</a>
+                    <br>
+                    <a href="#" type="button" class="btn btn-outline-secondary"><img
+                            src="https://img.icons8.com/android/50/000000/shopping-cart.png" width="20px" /> Añadir al
+                        carrito</a>
+                </div>
+            </div>
+        </div>
+        <div class="oferta">
+            <div class="card cuenta" style="width: 18rem; height: 18rem;">
+                <div class="card-body">
+                    <h1 class="card-title precio">Esta oferta termina en</h1>
+                    <div class="cuentaR" id="clock"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1>4 Nuevas ofertas</h1>
+    </div>
+    <div class="listas">
+        <img src="/assets/image/juego1.jpeg" alt="" width="50px" class="imgJ">
+        <div>
+            <a href="/pages/detallejuegos/piratesofblackcove.html" class="title">
+                <h2>Pirates of Black Cove</h2>
+            </a> 
+            <div>
+                <ion-icon class="icon" width="30px" name="star"></ion-icon>
+                <ion-icon class="icon" width="30px" name="star"></ion-icon>
+                <ion-icon class="icon" width="30px" name="star"></ion-icon>
+                <ion-icon class="icon" name="star-half"></ion-icon>
+                <ion-icon class="icon" name="star-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="derecha2">
+            <h2>US$25</h2>
+        </div>
+        <div class="right">
+            <a href="#" type="button" class="btn btn-outline-secondary"><img
+                    src="https://img.icons8.com/android/50/000000/shopping-cart.png" width="20px" /> Añadir al
+                carrito</a>
+        </div>
+        <div class="derecha1">
+            <a href="#" type="button" class="btn btn-warning">Comprar ahora</a>
+        </div>
+    </div>
+    <div class="listas">
+        <img src="/assets/image/gtaV.jpeg" alt="" width="50px" class="imgJ">
+        <div>
+            <a href="/pages/detallejuegos/gta5.html" class="title"><h2 >GTA V</h2></a>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" name="star-half"></ion-icon>
+        </div>
+
+        <div class="derecha2">
+            <h2>US$25</h2>
+        </div>
+        <div class="right">
+            <a href="#" type="button" class="btn btn-outline-secondary"><img
+                    src="https://img.icons8.com/android/50/000000/shopping-cart.png" width="20px" /> Añadir al
+                carrito</a>
+        </div>
+        <div class="derecha1">
+            <a href="#" type="button" class="btn btn-warning">Comprar ahora</a>
+        </div>
+    </div>
+    <div class="listas">
+        <img src="/assets/image/minecraft.jpeg" alt="" width="50px" class="imgJ">
+        <div>
+            <a href="/pages/detallejuegos/minecraft.html" class="title">
+                <h2>Minecraft</h2></a>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" name="star-half"></ion-icon>
+            <ion-icon class="icon" name="star-outline"></ion-icon>
+            <ion-icon class="icon" name="star-outline"></ion-icon>
+        </div>
+
+        <div class="derecha2">
+            <h2>US$25</h2>
+        </div>
+        <div class="right">
+            <a href="#" type="button" class="btn btn-outline-secondary"><img
+                    src="https://img.icons8.com/android/50/000000/shopping-cart.png" width="20px" /> Añadir al
+                carrito</a>
+        </div>
+        <div class="derecha1">
+            <a href="#" type="button" class="btn btn-warning">Comprar ahora</a>
+        </div>
+    </div>
+    <div class="listas">
+        <img src="/assets/image/fortnite.jpeg" alt="" width="50px" class="imgJ">
+        <div>
+            <a href="/pages/detallejuegos/fortnite.html" class="title">
+                <h2>Fortnite</h2></a>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" width="30px" name="star"></ion-icon>
+            <ion-icon class="icon" name="star-half"></ion-icon>
+            <ion-icon class="icon" name="star-outline"></ion-icon>
+        </div>
+        <div class="derecha2">
+            <h2>US$19</h2>
+        </div>
+        <div class="right">
+            <a href="#" type="button" class="btn btn-outline-secondary"><img
+                    src="https://img.icons8.com/android/50/000000/shopping-cart.png" width="20px" /> Añadir al
+                carrito</a>
+        </div>
+        <div class="derecha1">
+            <a href="#" type="button" class="btn btn-warning">Comprar ahora</a>
+        </div>
+    </div>
+    <footer>
+        <div class="contenedor footer">
+            <div>
+                © Copyright 2022 Gamer Guy - All Rights Reserved <br>
+                <a href="" class="logos"><ion-icon class="icono" name="logo-instagram"></a>
+                <a href="" class="logos"><ion-icon class="icono" name="logo-facebook"></ion-icon></a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="/js/detalleJuego.js"></script>
+</body>
+
+</html>
