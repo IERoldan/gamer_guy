@@ -167,7 +167,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
-                                    <label for="full-name" class="form-label">Nombre del Juego</label>
+                                    <label for="Game" class="form-label">Nombre del Juego</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-gamepad"></i>
@@ -177,7 +177,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
-                                    <label for="email" class="form-label">Categoría</label>
+                                    <label for="text" class="form-label">Categoría</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-tags"></i>
@@ -194,13 +194,16 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
-                                    <label for="email" class="form-label">Imagen Portada</label>
+                                    <label for="image" class="form-label">Imagen Portada</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-images"></i>
                                         </span>
-                                        <input class="form-control form-control-sm" id="game-picture" type="file">
+                                        <input class="form-control form-control-sm" id="game-picture" type="url" onchange="loadImage(evt)">
                                     </div>
+                                </div>
+                                <div class="mb-3 w-75 mx-auto input-group">
+                                    <img src="" class="img-preview" id="img-preview" width="100rem">
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
                                     <label for="exampleFormControlInput1" class="form-label">Descripción</label>
@@ -215,19 +218,6 @@
                                     <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
                                     <label class="form-check-label" for="Publicado">Publicar</label>
                                 </div>
-                                <!-- BOTON PARA REGISTRARSE CON REDES -->
-                                <div class="mb-3 w-75 mx-auto">
-                                    <!-- FACEBOOK -->
-                                    <button type="button" class="btn facebook-bg text-white">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </button>
-                                    <!-- GOOGLE -->
-                                    <button type="button" class="btn gmail-bg text-white">
-                                        <i class="fab fa-google"></i>
-                                    </button>
-                                </div>
-
-                            
                         </div>
                         <!-- PIE DEL MODAL -->
                         <div class="modal-footer d-flex justify-content-between">
@@ -254,7 +244,6 @@
                             </tr>
                         </thead>
                         <tbody class="text-white" id="table-body">
-                            <!-- SALUD -->
                             <tr class="text-center align-middle">
                                 <td scope="row">
                                     <p class="m-0">001</p>
@@ -266,7 +255,7 @@
                                     <p class="m-0">Guerra</p>
                                 </td>
                                 <td>
-                                    <img src="/assets/image/fifa22.jpg" width="100rem">
+                                    <img src="" width="100rem">
                                 </td>
                                 <td>
                                     <p class="m-0">Es un  juego de guerra</p>
