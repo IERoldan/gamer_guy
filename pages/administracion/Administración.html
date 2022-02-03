@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/js/admin_games.js" defer></script>
 </head>
 
 <body class="d-flex-column id-index background_body">
@@ -74,7 +75,7 @@
             <div class="modal-content">
                 <!-- CABECERA DEL MODAL -->
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Registrar usuario</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar Usuario</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <!-- CUERPO DEL MODAL -->
@@ -122,13 +123,14 @@
                                 <i class="fab fa-google"></i>
                             </button>
                         </div>
-                    </form>
+                    
                 </div>
                 <!-- PIE DEL MODAL -->
                 <div class="modal-footer d-flex justify-content-between">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success">Registrar</button>
+                    <button type="button" class="btn btn-success" >Registrar</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>
@@ -148,19 +150,19 @@
                     <div class="modal-content">
                         <!-- CABECERA DEL MODAL -->
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalLabelGame">Registrar usuario</h5>
+                            <h5 class="modal-title" id="modalLabelGame">Registrar Juego</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <!-- CUERPO DEL MODAL -->
                         <div class="modal-body">
-                            <form>
+                            <form id="gamesForm" onsubmit="setGame(event)">
                                 <div class="mb-3 w-75 mx-auto">
                                     <label for="full-name" class="form-label">Código</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-barcode"></i>
                                         </span>
-                                        <input type="text" class="form-control" id="full-name"
+                                        <input type="text" class="form-control" id="game-cod"
                                             aria-describedby="emailHelp">
                                     </div>
                                 </div>
@@ -170,7 +172,7 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-gamepad"></i>
                                         </span>
-                                        <input type="text" class="form-control" id="full-name"
+                                        <input type="text" class="form-control" id="game-name" name="game-name"
                                             aria-describedby="emailHelp">
                                     </div>
                                 </div>
@@ -180,7 +182,7 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-tags"></i>
                                         </span>
-                                        <input type="email" class="form-control" id="email"
+                                        <input type="string" class="form-control" id="game-category"
                                             aria-describedby="emailHelp">
                                     </div>
                                 </div>
@@ -190,7 +192,7 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="far fa-comment-dots"></i>
                                         </span>
-                                        <input type="Descripción" class="form-control" id="Descripción"
+                                        <input type="Descripción" class="form-control" id="game-description"
                                             aria-describedby="emailHelp">
                                     </div>
                                 </div>
@@ -210,13 +212,14 @@
                                     </button>
                                 </div>
 
-                            </form>
+                            
                         </div>
                         <!-- PIE DEL MODAL -->
                         <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                            <button type="button" class="btn btn-success">Registrar</button>
+                            <button type="submit" class="btn btn-success">Registrar</button>
                         </div>
+                    </form>
                     </div>
                 </div>
             </div>
@@ -234,7 +237,7 @@
                                 <th scope="col" class="text-center"><i class="fas fa-tasks"></i> Opciones</th>
                             </tr>
                         </thead>
-                        <tbody class="text-white">
+                        <tbody class="text-white" id="table-body">
                             <!-- SALUD -->
                             <tr class="text-center">
                                 <td scope="row">
