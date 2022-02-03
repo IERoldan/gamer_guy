@@ -150,7 +150,7 @@
                     <div class="modal-content">
                         <!-- CABECERA DEL MODAL -->
                         <div class="modal-header">
-                            <h5 class="modal-title" id="modalLabelGame">Registrar Juego</h5>
+                            <h5 class="modal-title" id="modalLabelGame">Ingresa un nuevo juego</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <!-- CUERPO DEL MODAL -->
@@ -177,23 +177,38 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
-                                    <label for="email" class="form-label">Categoria</label>
+                                    <label for="email" class="form-label">Categoría</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-tags"></i>
                                         </span>
-                                        <input type="string" class="form-control" id="game-category"
-                                            aria-describedby="emailHelp">
+                                            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="game-category">
+                                                <option selected>Selecciona una categoría</option>
+                                                <option value="1">Deportes</option>
+                                                <option value="2">Acción</option>
+                                                <option value="3">Guerra</option>
+                                                <option value="4">Aventuras</option>
+                                                <option value="5">Rol</option>
+                                                <option value="6">Estrategía</option>
+                                              </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 w-75 mx-auto input-group">
+                                    <label for="email" class="form-label">Imagen Portada</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text bg-primary text-white" id="basic-addon1">
+                                            <i class="fas fa-images"></i>
+                                        </span>
+                                        <input class="form-control form-control-sm" id="game-picture" type="file">
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
-                                    <label for="password" class="form-label">Descripción</label>
+                                    <label for="exampleFormControlInput1" class="form-label">Descripción</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="far fa-comment-dots"></i>
                                         </span>
-                                        <input type="Descripción" class="form-control" id="game-description"
-                                            aria-describedby="emailHelp">
+                                        <textarea class="form-control" type="Descripción" aria-label="With textarea" id="game-description" maxlength="100"></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3 form-check w-75 mx-auto">
@@ -217,7 +232,7 @@
                         <!-- PIE DEL MODAL -->
                         <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                            <button type="submit" class="btn btn-success">Registrar</button>
+                            <button type="submit" class="btn btn-success">Agregar</button>
                         </div>
                     </form>
                     </div>
@@ -232,6 +247,7 @@
                                 <th scope="col" class="text-center"><i class="fas fa-barcode"></i> Código</th>
                                 <th scope="col" class="text-center"><i class="fas fa-gamepad"></i> Nombre</th>
                                 <th scope="col" class="text-center"><i class="fas fa-tags"></i> Categoría</th>
+                                <th scope="col" class="text-center"><i class="fas fa-images"></i></i> Imagen</th>
                                 <th scope="col" class="text-center"><i class="far fa-comment-dots"></i> Descripción</th>
                                 <th scope="col" class="text-center"><i class="fas fa-eye"></i> Publicado</th>
                                 <th scope="col" class="text-center"><i class="fas fa-tasks"></i> Opciones</th>
@@ -239,18 +255,21 @@
                         </thead>
                         <tbody class="text-white" id="table-body">
                             <!-- SALUD -->
-                            <tr class="text-center">
+                            <tr class="text-center align-middle">
                                 <td scope="row">
-                                    <p>001</p>
+                                    <p class="m-0">001</p>
                                 </td>
                                 <td>
-                                    <p>God of War</p>
+                                    <p class="m-0">God of War</p>
                                 </td>
                                 <td>
-                                    <p>Guerra</p>
+                                    <p class="m-0">Guerra</p>
                                 </td>
                                 <td>
-                                    <p>Es un  juego de guerra</p>
+                                    <img src="/assets/image/fifa22.jpg" width="100rem">
+                                </td>
+                                <td>
+                                    <p class="m-0">Es un  juego de guerra</p>
                                 </td>
                                 <td>
                                     <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
