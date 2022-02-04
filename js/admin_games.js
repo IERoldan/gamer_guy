@@ -22,9 +22,10 @@ function setGame(event) {
         category: formElements['game-category'].value,
         image: formElements['game-picture'].value,
         description: formElements['game-description'].value,
-        active: false,
+        active: formElements['publicado'],
         favorite: false
     }
+    console.log(newGame)
     games.push(newGame);
     refreshGames();
 }
@@ -39,10 +40,10 @@ function loadGamesList() {
             <td scope="row"><p class="m-0">${game.cod}</p></td>
             <td><p class="m-0">${game.name}</p></td>
             <td><p class="m-0">${game.category}</p></td>
-            <td><img src="${game.picture}" width="100rem"></td>
+            <td><img src="${game.image}" width="100rem"></td>
             <td><p class="m-0">${game.description}</p></td>
             <td>
-                <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
+                <input type="checkbox" class="form-check-input" id="Publicado${index} name="Publicado">
             </td>
             <td>
                 <button type="button" class="btn btn-danger btn-sm" onclick="gameDelete(${index})"><i class="fas fa-trash-alt"></i></button>

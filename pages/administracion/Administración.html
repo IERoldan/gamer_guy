@@ -111,14 +111,14 @@
                         <div class="mb-3 form-check w-75 mx-auto">
                             <input type="checkbox" class="form-check-input" id="suscription" name="suscription">
                             <label class="form-check-label" for="suscription">Recibir promociones</label>
-                        </div>                    
+                        </div>
                 </div>
                 <!-- PIE DEL MODAL -->
                 <div class="modal-footer d-flex justify-content-between">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success" >Registrar</button>
+                    <button type="button" class="btn btn-success">Registrar</button>
                 </div>
-            </form>
+                </form>
             </div>
         </div>
     </div>
@@ -151,7 +151,7 @@
                                             <i class="fas fa-barcode"></i>
                                         </span>
                                         <input type="text" class="form-control" id="game-cod"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
@@ -161,7 +161,7 @@
                                             <i class="fas fa-gamepad"></i>
                                         </span>
                                         <input type="text" class="form-control" id="game-name" name="game-name"
-                                            aria-describedby="emailHelp">
+                                            aria-describedby="emailHelp" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
@@ -170,15 +170,16 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-tags"></i>
                                         </span>
-                                            <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="game-category">
-                                                <option selected>Selecciona una categoría</option>
-                                                <option value="1">Deportes</option>
-                                                <option value="2">Acción</option>
-                                                <option value="3">Guerra</option>
-                                                <option value="4">Aventuras</option>
-                                                <option value="5">Rol</option>
-                                                <option value="6">Estrategía</option>
-                                              </select>
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example"
+                                            id="game-category" required>
+                                            <option selected>Selecciona una categoría</option>
+                                            <option value="Deportes">Deportes</option>
+                                            <option value="Acción">Acción</option>
+                                            <option value="Guerra">Guerra</option>
+                                            <option value="Aventuras">Aventuras</option>
+                                            <option value="Rol">Rol</option>
+                                            <option value="Estrategía">Estrategía</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
@@ -187,7 +188,8 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-images"></i>
                                         </span>
-                                        <input class="form-control form-control-sm" id="game-picture" type="url" onchange="loadImage(evt)">
+                                        <input class="form-control form-control-sm" id="game-picture"
+                                            name="game-picture" type="url" height="" onchange="loadImage(event)">
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
@@ -199,20 +201,23 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="far fa-comment-dots"></i>
                                         </span>
-                                        <textarea class="form-control" type="Descripción" aria-label="With textarea" id="game-description" maxlength="100"></textarea>
+                                        <textarea class="form-control" type="Descripción" aria-label="With textarea"
+                                            id="game-description" name="game-description" maxlength="100"
+                                            required></textarea>
                                     </div>
                                 </div>
                                 <div class="mb-3 form-check w-75 mx-auto">
-                                    <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
+                                    <input type="checkbox" class="form-check-input" id="publicado" name="publicado">
                                     <label class="form-check-label" for="Publicado">Publicar</label>
                                 </div>
                         </div>
                         <!-- PIE DEL MODAL -->
                         <div class="modal-footer d-flex justify-content-between">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                aria-label="Close">Cancelar</button>
                             <button type="submit" class="btn btn-success">Agregar</button>
                         </div>
-                    </form>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -246,22 +251,67 @@
                                     <img src="" width="100rem">
                                 </td>
                                 <td>
-                                    <p class="m-0">Es un  juego de guerra</p>
+                                    <p class="m-0">Es un juego de guerra</p>
                                 </td>
                                 <td>
-                                    <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
+                                    <input type="checkbox" class="form-check-input" id="activo" name="activo">
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>
-                                    <button type="button" class="btn btn-warning btn-sm"><i class="far fa-edit"></i></button>
-                                    <button type="button" class="btn btn-success btn-sm"><i class="fas fa-star"></i></button>
+                                    <button type="button" class="btn btn-danger btn-sm"><i
+                                            class="fas fa-trash-alt"></i></button>
+                                    <button type="button" class="btn btn-warning btn-sm"><i
+                                            class="far fa-edit"></i></button>
+                                    <button type="button" class="btn btn-success btn-sm"><i
+                                            class="fas fa-star"></i></button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
-        </div>
+                <div class="row row-cols-1 row-cols-md-4 g-4 room-cards">
+                    <div class="col">
+                      <div class="card">
+                        <img src="/assets/recomendados/Recomendado_1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><a href="/pages/detallejuegos/fifa.html">FIFA 22 (ENG) (PC)</a></h5>
+                          <p class="card-text">El juego FIFA 22 está destinado a cautivar tanto a los veteranos de la franquicia
+                            como a los recién llegados.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="/assets/recomendados/recomendado_2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><a href="/pages/detallejuegos/piratesofblackcove.html">Pirates of Black Cove</a>
+                          </h5>
+                          <p class="card-text">El estudio finlandés Nitro Games, conocido por sus juegos de estrategia, pone a
+                            rodar una nueva aventura.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="/assets/recomendados/recomendado_3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><a href="/pages/detallejuegos/gta5.html">Grand Theft Auto V</a></h5>
+                          <p class="card-text">Grand Theft Auto V - Criminal Enterprise Starter Pack es la mejor manera de
+                            comenzar tu viaje de GTA V online.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card">
+                        <img src="/assets/recomendados/recomendado_4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><a href="/pages/detallejuegos/minecraft.html"> MINECRAFT </a></h5>
+                          <p class="card-text">MINECRAFT Minecraft es un juego de mundo abierto. Los jugadores crean «granjas» que
+                            son para conseguir un determinado material.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
 
     </main>
     <footer>
