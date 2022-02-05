@@ -2,7 +2,7 @@ const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 if(!currentUser) window.location.href = '/pages/login/login.html';
 
 const navOption = [
-    { viewValue: 'Administrar juegos', path: '/pages/administracion/Administracion.html', role: 'ADMIN_ROLE'},
+    { viewValue: 'Administrar juegos', path: '/pages/administracion/Administración.html', role: 'ADMIN_ROLE'},
     { viewValue: 'Cerrar Sesión', method: 'logout(event)'},
 ]
 const bodyHTML = document.getElementsByTagName('body');
