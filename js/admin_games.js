@@ -2,6 +2,7 @@
 let games = JSON.parse(localStorage.getItem('games')) || [];
 
 const gamesForm = document.querySelector('#gamesForm');
+const cardlist = document.querySelector('#cardList');
 // Recorrer el array de juegos para mostrar el listado
 // Añadir un nuevo juego a mi array de games
 // gamesForm.addEventListener('onsubmit', (event) => {
@@ -55,7 +56,6 @@ function loadGamesList() {
         </tr>`;
     })
 }
-loadGamesList()
 
 function gameDelete(index) {
     games.splice(index, 1);
@@ -64,6 +64,7 @@ function gameDelete(index) {
 
 function refreshGames() {
     localStorage.setItem('games', JSON.stringify(games));
+    printCardGames();
     loadGamesList();
 }
 
@@ -71,18 +72,26 @@ function setFavorite(index) {
     // games.for
 }
 
-const cardlist = games.forEach((game, index) => {
-    if (game[active] = true) {
-        cardlist.innerHTML +=
-    `
-    <div class="col">
-        <div class="card">
-            <img "${game.image}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">${game.name}</h5>
-                              <p class="card-text">${game.description}</p>
-                </div>
-        </div>
-    </div>
-    `}
-return})
+function printCardGames() {
+ 
+  cardlist.innerHTML = "";
+
+  games.forEach((game, index) => {
+      if (game.active) {
+          cardlist.innerHTML +=
+      `
+      <div class="col">
+          <div class="card">
+              <img src="${game.image}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <h5 class="card-title">${game.name}</h5>
+                                <p class="card-text">${game.description}</p>
+                  </div>
+          </div>
+      </div>
+      `}
+  })
+}
+
+loadGamesList()
+printCardGames();
