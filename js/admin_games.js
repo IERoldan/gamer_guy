@@ -2,6 +2,7 @@
 let games = JSON.parse(localStorage.getItem('games')) || [];
 
 const gamesForm = document.querySelector('#gamesForm');
+let editedGame;
 // Recorrer el array de juegos para mostrar el listado
 // Añadir un nuevo juego a mi array de games
 // gamesForm.addEventListener('onsubmit', (event) => {
@@ -15,8 +16,10 @@ const loadImage = (evt) => {
     ImgPreviewElement.setAttribute('src', inputImgValue)
 }
 
-function setGame(event) {
+function addGame(event) {
     event.preventDefault();
+    gamesFormBtnUpload.cardlist.remove('hidden');
+    gamesFormBtnAdd.cardlist.add('hidden');
     const formElements = event.target.elements;
     let newGame = {
         name: formElements['game-name'].value,
@@ -49,7 +52,7 @@ function loadGamesList() {
             </td>
             <td>
                 <button type="button" class="btn btn-danger btn-sm" onclick="gameDelete(${index})"><i class="fas fa-trash-alt"></i></button>
-                <button type="button" class="btn btn-warning btn-sm" onclick="gameAvalible(${index})"><i class="far fa-edit"></i></button>
+                <button type="button" class="btn btn-warning btn-sm" onclick="editGame(${index})"><i class="far fa-edit"></i></button>
                 <button type="button" class="btn btn-success btn-sm" onclick="setFavorite(${index})"><i class="fas fa-star"></i></button>
             </td>
         </tr>`;
@@ -70,9 +73,37 @@ function refreshGames() {
 function setFavorite(index) {
     // games.for
 }
+function editGame(index){
+    gamesFormBtnUpload.cardlist.add('hidden');
+    gamesFormBtnAdd.cardlist.remove('hidden');
+    let gameToEdit = games[index]
+    const gameModalBtn = document.getElementById('gameModalBtn')
+    gamesForm['game-cod'].value = gameToEdit.cod;
+    gamesForm['game-name'].value = gameToEdit.name;
+    gamesForm['game-decription'].value = gameToEdit.decription;
+    gamesForm['game-category'].value = gameToEdit.category;
+
+}
+
+funtion updateGame(e){
+    e.preventDefault()
+    games[editItem] = setObject()
+}
+funtion setObject(){
+    const newGame = {
+        name: gamesForm['game-name'].value,
+        cod: gamesForm['game-cod'].value,
+        category: gamesForm['game-category'].value,
+        image: gamesForm['game-picture'].value,
+        description: gamesForm['game-description'].value,
+        active: gamesForm['publicado'].checked,
+        favorite: false
+    }
+    return newGame;
+}
 
 const cardlist = games.forEach((game, index) => {
-    if (game[active] = true) {
+    if (game[active] == true) {
         cardlist.innerHTML +=
     `
     <div class="col">
