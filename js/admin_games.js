@@ -14,6 +14,7 @@ const loadImage = (evt) => {
 function addGame(event) {
     event.preventDefault();
     let newGame = setObject();
+    console.log(newGame);
     games.push(newGame);
     refreshGames();
 }
@@ -94,6 +95,7 @@ gameModal.addEventListener('show.bs.modal', (event)=> {
         gameFormBtnUpdate.classList.remove('hidden');
         return;
     }
+
     document.getElementById('gamesForm').reset()
     gameFormBtnAdd.classList.remove('hidden');
     gameFormBtnUpdate.classList.add('hidden');
