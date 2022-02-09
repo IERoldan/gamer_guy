@@ -50,7 +50,7 @@ function loadGamesList() {
             </td>
             <td>
                 <button type="button" class="btn btn-danger btn-sm" onclick="gameDelete(${index})"><i class="fas fa-trash-alt"></i></button>
-                <button data-bs-toggle="modal" data-bs-target="#gameModal" type="button" class="btn btn-warning btn-sm" onclick="gameEdit(${index})" data-edit="true"><i class="far fa-edit"></i></button
+                <button data-bs-toggle="modal" data-bs-target="#gameModal" type="button" class="btn btn-warning btn-sm" onclick="gameEdit(${index})" data-edit="true"><i class="far fa-edit"></i></button>
                 <button type="button" class="btn btn-success btn-sm" onclick="setFavorite(${index})"><i class="fas fa-star" ></i></button>
             </td>
         </tr>`;
@@ -75,7 +75,7 @@ function setObject(){
         cod: gamesForm['game-cod'].value,
         name: gamesForm['game-name'].value,
         category: gamesForm['game-category'].value,
-        image: gamesForm['game-picture'].value
+        image: gamesForm['game-picture'].value,
         description: gamesForm['game-description'].value,
         active: gamesForm['publicado'].checked,
         favorite: false
