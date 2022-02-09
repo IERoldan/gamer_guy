@@ -126,8 +126,9 @@
     <main>
         <div class="container">
             <h2 class="text-white m-3">Agrega un nuevo juego</h2>
-            <button type="button" class="btn btn-outline-warning text-white btn-md m-3" data-bs-toggle="modal"
+            <button type="button" class="btn btn-outline-warning text-white btn-md m-3" id="gameModalBtn" data-bs-toggle="modal"
                 data-bs-target="#gameModal"><i class="fas fa-plus-circle"></i></button>
+
             <!-- =================================
                 ==			  MODAL			   ==
                 ================================= -->
@@ -143,15 +144,14 @@
                         </div>
                         <!-- CUERPO DEL MODAL -->
                         <div class="modal-body">
-                            <form id="gamesForm" onsubmit="setGame(event)">
+                            <form id="gamesForm">
                                 <div class="mb-3 w-75 mx-auto">
                                     <label for="full-name" class="form-label">Código</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-barcode"></i>
                                         </span>
-                                        <input type="text" class="form-control" id="game-cod"
-                                            aria-describedby="emailHelp" required>
+                                        <input type="text" class="form-control" id="game-cod" name="game-cod" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
@@ -160,8 +160,7 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-gamepad"></i>
                                         </span>
-                                        <input type="text" class="form-control" id="game-name" name="game-name"
-                                            aria-describedby="emailHelp" required>
+                                        <input type="text" class="form-control" id="game-name" name="game-name" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
@@ -171,7 +170,7 @@
                                             <i class="fas fa-tags"></i>
                                         </span>
                                         <select class="form-select form-select-sm" aria-label=".form-select-sm example"
-                                            id="game-category" required>
+                                            id="game-category" name="game-category" required>
                                             <option selected>Selecciona una categoría</option>
                                             <option value="Deportes">Deportes</option>
                                             <option value="Acción">Acción</option>
@@ -213,10 +212,9 @@
                         </div>
                         <!-- PIE DEL MODAL -->
                         <div class="modal-footer d-flex justify-content-between">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
-                                aria-label="Close">Cancelar</button>
-                            <button type="submit" id="gameFormBtnAdd" class="btn btn-success hidden" data-bs-dismiss="modal">Agregar</button>
-                            <button type="submit" id="gameFormBtnUpload" class="btn btn-primary hidden" data-bs-dismiss="modal">Actualizar</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button type="submit" id="gameFormBtnAdd" class="btn btn-success">Agregar</button>
+                            <button type="submit" id="gameFormBtnUpdate" class="btn btn-primary hidden" onclick="updateGame(event)" data-bs-dismiss="modal">Actualizar</button>
                         </div>
                         </form>
                     </div>
@@ -292,6 +290,13 @@
     <script src="/js/isAdmin.js"></script>
     <script src="/js/bootstrap.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- <script type="module">
+        var myModal = document.getElementById('gameModal')
+        myModal.addEventListener('show.bs.modal', function (event, data) {
+            console.log('modal abierto', event)
+            
+        })
+    </script> -->
 </body>
 
 </html>
