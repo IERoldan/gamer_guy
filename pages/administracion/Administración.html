@@ -138,8 +138,9 @@
     <main>
         <div class="container">
             <h2 class="text-white m-3">Agrega un nuevo juego</h2>
-            <button type="button" class="btn btn-outline-warning text-white btn-md m-3" data-bs-toggle="modal"
+            <button type="button" class="btn btn-outline-warning text-white btn-md m-3" id="gameModalBtn" data-bs-toggle="modal"
                 data-bs-target="#gameModal"><i class="fas fa-plus-circle"></i></button>
+
             <!-- =================================
                 ==			  MODAL			   ==
                 ================================= -->
@@ -155,7 +156,7 @@
                         </div>
                         <!-- CUERPO DEL MODAL -->
                         <div class="modal-body">
-                            <form id="gamesForm" onsubmit="setGame(event)">
+                            <form id="gamesForm">
                                 <div class="mb-3 w-75 mx-auto">
                                     <label for="full-name" class="form-label">Código</label>
                                     <div class="input-group">
@@ -163,7 +164,7 @@
                                             <i class="fas fa-barcode"></i>
                                         </span>
                                         <input type="text" class="form-control" id="game-cod"
-                                            aria-describedby="emailHelp">
+                                        name="game-cod">
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
@@ -172,8 +173,7 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-gamepad"></i>
                                         </span>
-                                        <input type="text" class="form-control" id="game-name" name="game-name"
-                                            aria-describedby="emailHelp">
+                                        <input type="text" class="form-control" id="game-name" name="game-name">
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
@@ -183,7 +183,7 @@
                                             <i class="fas fa-tags"></i>
                                         </span>
                                         <input type="string" class="form-control" id="game-category"
-                                            aria-describedby="emailHelp">
+                                        name="game-category">
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
@@ -193,11 +193,11 @@
                                             <i class="far fa-comment-dots"></i>
                                         </span>
                                         <input type="Descripción" class="form-control" id="game-description"
-                                            aria-describedby="emailHelp">
+                                        name="game-description">
                                     </div>
                                 </div>
                                 <div class="mb-3 form-check w-75 mx-auto">
-                                    <input type="checkbox" class="form-check-input" id="Publicado" name="Publicado">
+                                    <input type="checkbox" class="form-check-input" id="Publicado" name="publicado">
                                     <label class="form-check-label" for="Publicado">Publicar</label>
                                 </div>
                                 <!-- BOTON PARA REGISTRARSE CON REDES -->
@@ -217,7 +217,8 @@
                         <!-- PIE DEL MODAL -->
                         <div class="modal-footer d-flex justify-content-between">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                            <button type="submit" class="btn btn-success">Registrar</button>
+                            <button type="submit" class="btn btn-success" id="gameFormBtnAdd">Registrar</button>
+                            <button type="submit" class="btn btn-primary hidden" id="gameFormBtnUpdate" onclick="updateGame(event)" data-bs-dismiss="modal">Actualizar</button>
                         </div>
                     </form>
                     </div>
@@ -274,6 +275,13 @@
 
     </footer>
     <script src="/js/bootstrap.js"></script>
+    <!-- <script type="module">
+        var myModal = document.getElementById('gameModal')
+        myModal.addEventListener('show.bs.modal', function (event, data) {
+            console.log('modal abierto', event)
+            
+        })
+    </script> -->
 </body>
 
 </html>
