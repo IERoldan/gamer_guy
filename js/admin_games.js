@@ -23,11 +23,13 @@ function updateGame(e) {
     e.preventDefault();
     games[itemToEdit] = setObject();
     refreshGames();
+    printCardGames()
 }
 
 function gameDelete(index) {
     games.splice(index, 1);
     refreshGames();
+    printCardGames()
 }
 
 function refreshGames() {
@@ -45,7 +47,7 @@ function loadGamesList() {
             <td scope="row"><p class="m-0">${game.cod}</p></td>
             <td><p class="m-0">${game.name}</p></td>
             <td><p class="m-0">${game.category}</p></td>
-            <td><img src="${game.image}" width="100rem"></td>
+            <td><img src="${game.image}" width="100rem" height="100rem"></td>
             <td><p class="m-0">${game.description}</p></td>
             <td>
                 <input type="checkbox" class="form-check-input" id="Publicado" checked=${game.active} name="Publicado">
@@ -114,9 +116,18 @@ function printCardGames() {
             <div class="card">
                 <img src="${game.image}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">${game.name}</h5>
+                        <h5 class="card-title"><strong>${game.name}</strong></h5>
                                   <p class="card-text">${game.description}</p>
                     </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Categorias:</strong> ${game.category}</li>
+                    </ul>
+                  <div class="card-body">
+                    <a href="" class="card-link"><button type="button" class="btn btn-primary btn-sm"><i
+                          class="fas fa-info-circle"></i></button></a>
+                    <a href="#" class="card-link"><button type="button" class="btn btn-success btn-sm"><i
+                          class="fas fa-shopping-cart"></i></button></a>
+                  </div>
             </div>
         </div>
         `}
