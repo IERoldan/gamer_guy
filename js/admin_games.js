@@ -33,6 +33,7 @@ function gameDelete(index) {
 function refreshGames() {
     localStorage.setItem('games', JSON.stringify(games));
     loadGamesList();
+    printCardGames()
 }
 
 function loadGamesList() {
