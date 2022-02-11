@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/assets/gamer_guy_logo_2.png">
+  <title>Gamer Guy</title>
+  <link rel="stylesheet" href="/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="d-flex-column id-index background_body">
+                              <!-- =================================
+                                ==			  CONTENEDOR HEADER			   ==
+                                ================================= -->
+    <header class="sticky-top">
+                              <!-- =================================
+                                ==			  NAVEGADOR			   ==
+                                ================================= -->
+      <nav class="navbar p-0 navbar-expand-lg navbar-light background_header">
+        <div class="container-fluid">
+          <!-- LOGO -->
+          <a class="navbar-brand p-0" href="/index.html">
+            <img src="/assets/gamer_guy_logo_2.png" alt="Gamer Guy" width="60" height="60"
+              class="d-inline-block align-text-center">
+          
+          </a>
+          <!-- BUSCADOR -->
+          <form class="d-flex d-none d-lg-inline-flex">
+            <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-white text-white" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- BOTONES Y COLAPSE -->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="pages/acerca_de_nosotros/acerca_de_nosotros.html">Acerca de
+                  nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="pages/contactenos/contactenos.html">Contáctenos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="#" data-bs-toggle="modal"
+                  data-bs-target="#abrirModal">Suscríbete</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="pages/registrese/registrese.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </header>
+    <main>
+        <div class="ContainerContacto">
+          <div class="form">
+               <form>
+                 <h2>CONTACTO</h2>
+                  <div class="form__content"> 
+                      <label for="ContactoNombre" class="form__label text-white">Nombre</label>
+                      <input type="text" class="form__input" id="ContactoNombre" placeholder="ej: David">
+                      <label for="ContactoEmail" class="form__label text-white">Correo Electronico</label>
+                      <input type="text" class="form__input" id="ContactoEmail" placeholder=" ej: email@email.com">
+                      <i class="text-white">No compartiremos tu correo con nadie mas</i>
+                      <label for="ContactoMensaje" class="form__label text-white">Deja tu Mensaje</label>
+                      <textarea class="form__input" id="ContactoMensaje" rows="8" placeholder="Escribe tu consulta"></textarea> 
+                      <div class="checkbox">
+                        <input type="checkbox" id="ContactoCheckbox">
+                        <label for="ContactoCheck" class="text-white">Quiero recibir notificaciones de novedades</label>
+                      </div>
+                  </div>
+                 
+                </form>
+           </div>  
+            <div class="form__img">
+                <img src="/assets/courier.png" alt="courier">
+            </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer__content">
+          <div class="redes">
+            <i class="fab fa-twitter"> Twitter</i>
+            <i class="fab fa-facebook"> Facebook</i>
+            <i class="fab fa-instagram"> Instagram</i>
+          </div>
+          <div>
+              <p class="text-white">© Todos los derechos reservados para el Creador - 2022</p>
+          </div>
+          <div class="footer__img">
+              <img src="/assets/gamer_guy_logo_2.png" alt="LOGO">
+          </div>
+        </div>
+      </footer>
+      <script src="https://kit.fontawesome.com/0de5ed4316.js" crossorigin="anonymous"></script>
+    
+      <script src="/js/bootstrap.js"></script>
+    </body>
+</html>

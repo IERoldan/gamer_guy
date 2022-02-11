@@ -36,3 +36,69 @@
     display: flex;
     justify-content: space-evenly;
 }
+/*formulario de contacto*/
+.form{
+    justify-content: space-evenly;
+}    
+.ContainerContacto{
+display: flex;
+justify-content: center ;
+align-items: center;
+margin-left: 200px;
+margin-top: 50px;
+
+}
+
+
+.form__content{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-items: center;
+
+}
+i{
+    color: #ffff;
+    font-size: 15px;
+}
+
+.form__img{
+    justify-items: center;
+
+}
+.form__img img{
+    width: 10%;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+/*footer*/
+.footer__content{
+    background-color: var(--var-color-primario);
+    margin-top: 500px;
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+
+.footer__img img{
+    width: 60%;
+}
+i{
+    font-size: 15px;
+}
