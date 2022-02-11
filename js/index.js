@@ -10,7 +10,7 @@ function printCardGames() {
             cardlist.innerHTML +=
         `
         <div class="col">
-            <div class="card">
+            <div class="card m-2" >
                 <img src="${game.image}" class="card-img-top" alt="...">
                     <div class="card-body">
                     <h5 class="card-title"><a href="">${game.name}</a></h5>
