@@ -7,6 +7,13 @@
     --var-color-tranparente: ;
     --var-color-body: #5816f1;
 }
+body{
+    font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    justify-content: space-between;
+}
 
 .background_header {
     background-color: var(--var-color-primario);
@@ -135,4 +142,22 @@ i{
 @media screen and (max-width:480px) {
     
     
+}
+.footer{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #4618AC;
+    margin-top: 10px;
+}
+.logos{
+    color: white;
+}
+.icono{
+    width: 30px;
+    height: 30px;
+    margin: 15px 15px;
+}
+.hidden {
+    display: none;
 }
