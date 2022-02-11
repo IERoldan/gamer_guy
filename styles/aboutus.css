@@ -30,7 +30,7 @@ body {
 }
 .card-img-top{
     border: none;
-    object-fit: fill;
+    object-fit: cover;
 }
 .card-text{
     margin: 0px;
