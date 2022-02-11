@@ -13,7 +13,7 @@ function printCardGames() {
             <div class="card">
                 <img src="${game.image}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"><strong>${game.name}</strong></h5>
+                    <h5 class="card-title"><a href="">${game.name}</a></h5>
                                   <p class="card-text">${game.description}</p>
                     </div>
                     <ul class="list-group list-group-flush">
