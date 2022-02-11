@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -99,7 +99,7 @@
                                 <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                     <i class="fas fa-lock"></i>
                                 </span>
-                                <input type="password" class="form-control"  aria-describedby="emailHelp">
+                                <input type="password" class="form-control" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="mb-3 form-check w-75 mx-auto">
@@ -141,12 +141,42 @@
                     Bienvenido
                 </div>
                 <form id="loginForm" onsubmit="login(event)">
-                    <input type="email" name="email" placeholder="Email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                    <input type="password" placeholder="Contraseña" name="password" id="password" required minlength="6">
+                    <input type="email" name="email" placeholder="Email" id="email" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <input type="password" placeholder="Contraseña" name="password" id="password" required
+                        minlength="6">
                     <button type="submit" class="btn1 btn btn-outline-secondary">INICIAR SESIÓN</button>
                 </form>
                 <div class="pie-form">
-                    <a href="#">¿Olvidaste tu contraseña?</a>
+                    <!-- <a>¿Olvidaste tu contraseña?</a> -->
+                    <!-- Button trigger modal -->
+                    <a style="color: white; margin-top: 20px;" type="button" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title" id="staticBackdropLabel">Recupera tu cuenta</h3>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Ingresa tu correo electronico o número de celular para recuperar tu cuenta
+                                    <input type="text" style="border: 1px solid ; margin-top: 10px;" name="" id="" placeholder="Correo electronico o número de celular">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#abrirModal">¿no tienes
                         cuenta? Suscribete</a>
                 </div>
@@ -162,7 +192,7 @@
             </div>
         </div>
     </div>
-    <footer>
+    <footer >
         <div class="contenedor footer">
             <div>
                 © Copyright 2022 Gamer Guy - All Rights Reserved <br>

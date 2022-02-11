@@ -13,6 +13,7 @@ body {
 
 #contenedor {
     display: flex;
+    flex-direction: row;
     align-items: baseline;
     justify-content: center;
     margin-top: 20px;
@@ -91,10 +92,10 @@ body {
     margin-top: 10px;
 }
 
-.pie-form {
+.pie-form a{
     font-size: 90%;
     text-align: center;    
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .pie-form a {
@@ -105,7 +106,7 @@ body {
 }
 
 .pie-form a:hover {
-    color: #6c757d;
+    color: #6c757d !important;
 }
 .pie2{
     display: flex;
@@ -132,4 +133,15 @@ body {
 }
 .footer{
     margin-top: 20px;
+}
+@media screen and (max-width: 800px){
+    .izq{
+        display: none !important;
+    }
+    #login{
+        width: 100%;
+        height: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
