@@ -39,6 +39,11 @@ body{
     height: 150px;
 }
 
+.card:hover{
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.7);
+    transform: translateY(-3%);
+}
+
 .productos_destacados{
     display: flex;
     justify-content: space-evenly;

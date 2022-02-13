@@ -54,7 +54,9 @@ const users = [
     localStorage.setItem('users', JSON.stringify(users));
 
 const navOption = [
-    { viewValue: 'Administrar juegos', path: '/pages/administracion/Administración.html', role: 'ADMIN_ROLE'},
+    {   viewValue: 'Administrar juegos',
+        path: '/pages/administracion/administración.html',
+        role: 'ADMIN_ROLE'},
     { viewValue: 'Cerrar Sesión', method: 'logout(event)'},
 ]
 const bodyHTML = document.getElementsByTagName('body');
