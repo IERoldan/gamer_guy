@@ -74,14 +74,14 @@
                 </div>
                 <!-- CUERPO DEL MODAL -->
                 <div class="modal-body">
-                    <form>
+                    <form id="registerForm" onsubmit="registerUser(event)">
                         <div class="mb-3 w-75 mx-auto">
                             <label for="full-name" class="form-label">Nombre y Apellido</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                     <i class="fas fa-users"></i>
                                 </span>
-                                <input type="text" class="form-control" id="full-name" aria-describedby="emailHelp">
+                                <input type="text" class="form-control" id="full-name" name="fullName" aria-describedby="emailHelp">
                             </div>
                         </div>
                         <div class="mb-3 w-75 mx-auto input-group">
@@ -90,7 +90,8 @@
                                 <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                     <i class="fas fa-envelope-open-text"></i>
                                 </span>
-                                <input type="email" class="form-control" aria-describedby="emailHelp">
+                                <input type="email" name="email" class="form-control" aria-describedby="emailHelp" required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                             </div>
                         </div>
                         <div class="mb-3 w-75 mx-auto">
@@ -99,7 +100,7 @@
                                 <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                     <i class="fas fa-lock"></i>
                                 </span>
-                                <input type="password" class="form-control" aria-describedby="emailHelp">
+                                <input type="password" name="password" class="form-control" aria-describedby="emailHelp" required minlength="5">
                             </div>
                         </div>
                         <div class="mb-3 form-check w-75 mx-auto">
@@ -123,7 +124,7 @@
                 <!-- PIE DEL MODAL -->
                 <div class="modal-footer d-flex justify-content-between">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success">Registrar</button>
+                    <button type="submit" class="btn btn-success">Registrar</button>
                 </div>
             </div>
         </div>
