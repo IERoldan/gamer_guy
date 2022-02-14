@@ -44,15 +44,15 @@ function loadGamesList() {
     games.forEach((game, index) => {
         tableBody.innerHTML += `
         <tr class="text-center align-middle">
-            <td scope="row"><p class="m-0">${game.cod}</p></td>
-            <td><p class="m-0">${game.name}</p></td>
-            <td><p class="m-0">${game.category}</p></td>
-            <td><img src="${game.image}" width="100rem" height="100rem"></td>
-            <td><p class="m-0">${game.description}</p></td>
-            <td>
+            <td class="d-none d-md-table-cell" scope="row"><p class="m-0">${game.cod}</p></td>
+            <td class="d-md-table-cell"><p class="m-0">${game.name}</p></td>
+            <td class="d-none d-md-table-cell"><p class="m-0">${game.category}</p></td>
+            <td class="d-md-table-cell"><img src="${game.image}" width="100rem" height="100rem"></td>
+            <td class="d-none d-md-table-cell"><p class="m-0">${game.description}</p></td>
+            <td class="d-md-table-cell">
                 <input type="checkbox" class="form-check-input" id="Publicado" checked=${game.active} name="Publicado">
             </td>
-            <td>
+            <td class="d-md-table-cell">
                 <button type="button" class="btn btn-danger btn-sm" onclick="gameDelete(${index})"><i class="fas fa-trash-alt"></i></button>
                 <button data-bs-toggle="modal" data-bs-target="#gameModal" type="button" class="btn btn-warning btn-sm" onclick="gameEdit(${index})" data-edit="true"><i class="far fa-edit"></i></button>
                 <button type="button" class="btn btn-success btn-sm" onclick="setFavorite(${index})"><i class="fas fa-star" ></i></button>
