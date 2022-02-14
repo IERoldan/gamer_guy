@@ -39,11 +39,178 @@ body{
     height: 150px;
 }
 
+.card:hover{
+    box-shadow: 5px 5px 20px rgb(0,0,0,0.7);
+    transform: translateY(-3%);
+}
+
 .productos_destacados{
     display: flex;
     justify-content: space-evenly;
 }
+/*formulario de contacto*/
 
+
+.form{
+    justify-content: space-evenly;
+}    
+.ContainerContacto{
+margin-top: 100px;
+margin-left: 175px;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+
+}
+.ContainerContacto::after{
+    content: "";
+    grid-column: 2/-1/-2/-1;
+    background-image: url(/assets/courier.png);
+    background-size: 600px;
+    background-position: 40px;
+    background-repeat: no-repeat;
+}
+
+.form__content{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+}
+.form__input{
+    padding: 10px 0 10px 8px;
+    width: 90%;
+    border: none;
+    border-radius: 7px;
+    outline-color: var(--var-color-primario);
+    text-align: left;
+
+}
+
+
+.form__content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+i{
+    color: #ffff;
+    font-size: 15px;
+}
+
+.form__label{
+    font-size: 25px;
+}
+
+
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    
+}
+.form__boton{
+    width: 20%;
+    padding: 8px;
+    border-radius: 7px;
+    border: none;
+    font-family: sans-serif;
+    display:inline-block;
+    margin:0 auto;
+    color:var(--var-color-primario);
+    font-weight:bold ;
+    
+
+}
+.form__boton:hover{
+    background-color:var(--var-color-primario) ;
+    color: #ffff;
+}
+
+.form__btn{
+    width: 30%;
+    display:inline-block;
+    margin: 20px auto ;
+    padding: 8px;
+    border: none;
+    border-radius: 7px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--var-color-primario);
+    box-shadow: 0px 15px 5px -8px rgba(0,0,0,0.31);
+
+}
+.form__btn:hover{
+    background-color: var(--var-color-primario);
+    color: #ffff;
+     
+}
+
+/* pagina error 404*/
+.error__404{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.error__404 img{
+    width: 45%;
+    object-fit: cover;
+}
+h3{
+    text-align: center;
+    font-size: 100px;
+    
+
+}
+/*footer*/
+.footer__content{
+    background-color: var(--var-color-primario);
+    margin-top: 150px;
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: sans-serif;
+    font-size: 50px;
+}
+
+.redes a{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-family: sans-serif;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+
+.footer__img img{
+    width: 60%;
+}
+i{
+    font-size: 15px;
+    color: #ffff;
+    margin: 8px 0;
+}
+@media screen and (max-width:480px) {
+    
+    
+}
 .footer{
     color: white;
     text-align: center;
@@ -62,3 +229,118 @@ body{
 .hidden {
     display: none;
 }
+
+h2{
+    font-size: 35px ;
+}
+
+
+
+
+
+/*reponsive*/
+@media screen and (max-width:768px){
+    .ContainerContacto{
+        margin-top: -100px;
+        margin-left: 85px;
+        margin-bottom: -80px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr) ;
+    
+    }
+    
+    .ContainerContacto::before{
+    content: "";
+    grid-column: 2/-1/-2/-1;
+    background-image: url(/assets/courier.png);
+    background-size: 400px;
+    background-position: 100px;
+    background-repeat: no-repeat;
+    }   
+    .form__btn{
+    width: 30%;
+    margin: 12px 200px ;
+    font-size: 23px;
+
+    }
+    .form__label{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 40px;
+    }
+    i{
+        font-size: 18px;
+    }
+    .text_p{
+        font-size: 18px;
+    }
+    .footer__content{
+        background-color: var(--var-color-primario);
+        margin-top: 150px;
+        padding: 5px; 
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+    }   
+    .footer__img img{
+        width: 60%;
+    } 
+   
+    .footer__img{
+        width: 20%;
+        
+    }
+    
+
+    .error__404 img{
+        width: 70%;
+    }
+    
+
+
+}
+@media screen and (max-width:480px){
+    .ContainerContacto{
+        margin-top: 30px;
+        margin-left: 40px;
+        margin-bottom: -60px;
+        grid-template-rows: 1fr ;
+    }
+    .form__btn{
+        width: 50%;
+        margin: 20px 95px 0 95px;
+        font-size: 20px;
+    
+    }
+    .footer__content{
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+    .footer__content p{
+        font-size: 16px;
+
+    }
+    .redes a{
+    
+        display: inline;
+        padding: 5px;
+      
+        font-size: 80px;
+    }
+    
+    .footer__img{
+        display: none;
+    }
+    .error__404 img{
+        width: 80%;
+    }
+    h3{
+        font-size: 70px;
+    }
+}
+
+

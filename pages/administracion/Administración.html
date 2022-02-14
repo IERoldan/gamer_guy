@@ -37,7 +37,8 @@
                     <button class="btn btn-outline-white text-white" type="submit"><i
                             class="fas fa-search"></i></button>
                 </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <!-- BOTONES Y COLAPSE -->
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -55,10 +56,6 @@
                         <li class="nav-item">
                             <a class="nav-link active text-white" aria-current="page" href="#" data-bs-toggle="modal"
                                 data-bs-target="#abrirModal">Suscríbete</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page"
-                                href="/pages/registrese/registrese.html">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -125,7 +122,8 @@
     <main>
         <div class="container">
             <h2 class="text-white m-3">Agrega un nuevo juego</h2>
-            <button type="button" class="btn btn-outline-warning text-white btn-md m-3" id="gameModalBtn" data-bs-toggle="modal" data-bs-target="#gameModal"><i class="fas fa-plus-circle"></i></button>
+            <button type="button" class="btn btn-outline-warning text-white btn-md m-3" id="gameModalBtn"
+                data-bs-toggle="modal" data-bs-target="#gameModal"><i class="fas fa-plus-circle"></i></button>
 
             <!-- =================================
                 ==			  MODAL			   ==
@@ -144,12 +142,13 @@
                         <div class="modal-body">
                             <form id="gamesForm">
                                 <div class="mb-3 w-75 mx-auto">
-                                    <label for="full-name" class="form-label">Código</label>
+                                    <label for="code" class="form-label">Código</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-barcode"></i>
                                         </span>
-                                        <input type="text" class="form-control" id="game-cod" name="game-cod" required>
+                                        <input type="number" maxlength="4" class="form-control" id="game-cod"
+                                            name="game-cod" required>
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto">
@@ -158,7 +157,8 @@
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-gamepad"></i>
                                         </span>
-                                        <input type="text" class="form-control" id="game-name" name="game-name" required>
+                                        <input type="text" class="form-control" id="game-name" name="game-name" required
+                                            maxlength="30">
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
@@ -180,7 +180,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 w-75 mx-auto input-group">
-                                    <label for="image" class="form-label">Imagen Portada</label>
+                                    <label for="image" type="image" class="form-label">Imagen Portada</label>
                                     <div class="input-group">
                                         <span class="input-group-text bg-primary text-white" id="basic-addon1">
                                             <i class="fas fa-images"></i>
@@ -195,11 +195,10 @@
                                 <div class="mb-3 w-75 mx-auto">
                                     <label for="exampleFormControlInput1" class="form-label">Descripción</label>
                                     <div class="input-group">
-                                        <span class="input-group-text bg-primary text-white" id="basic-addon1">
-                                            <i class="far fa-comment-dots"></i>
-                                        </span>
+                                        <span class="input-group-text bg-primary text-white" id="basic-addon1"> <i
+                                                class="far fa-comment-dots"></i> </span>
                                         <textarea class="form-control" type="Descripción" aria-label="With textarea"
-                                            id="game-description" name="game-description" maxlength="100"
+                                            id="game-description" name="game-description" minlength="20" maxlength="100"
                                             required></textarea>
                                     </div>
                                 </div>
@@ -207,13 +206,16 @@
                                     <input type="checkbox" class="form-check-input" id="publicado" name="publicado">
                                     <label class="form-check-label" for="Publicado">Publicar</label>
                                 </div>
-                        </div>
+                            </div>
                         <!-- PIE DEL MODAL -->
-                        <div class="modal-footer d-flex justify-content-between">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                            <button type="submit" id="gameFormBtnAdd" class="btn btn-success" onclick="addGame(event)">Agregar</button>
-                            <button type="submit" id="gameFormBtnUpdate" class="btn btn-primary hidden" onclick="updateGame(event)" data-bs-dismiss="modal">Actualizar</button>
-                        </div>
+                            <div class="modal-footer d-flex justify-content-between">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                                aria-label="Close">Cancelar</button>
+                                <button type="submit" id="gameFormBtnAdd" class="btn btn-success"
+                                onclick="addGame(event)">Agregar</button>
+                                <button type="submit" id="gameFormBtnUpdate" class="btn btn-primary hidden"
+                                onclick="updateGame(event)" data-bs-dismiss="modal">Actualizar</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -221,16 +223,30 @@
             <div class="row d-flex">
                 <!-- TABLA -->
                 <div class="col-12">
-                    <table class="table table- table-hover">
+                    <table class="table table- table-hover ">
                         <thead class="text-white">
                             <tr>
-                                <th scope="col" class="text-center"><p class="m-0"><i class="fas fa-barcode"></i></i></p>Código</th>
-                                <th scope="col" class="text-center"><p class="m-0"><i class="fas fa-gamepad"></i></p>Nombre</th>
-                                <th scope="col" class="text-center"><p class="m-0"><i class="fas fa-tags"></i></p>Categoría</th>
-                                <th scope="col" class="text-center"><p class="m-0"><i class="fas fa-images"></i></i></p>Imagen</th>
-                                <th scope="col" class="text-center"><p class="m-0"><i class="far fa-comment-dots"></i></p>Descripción</th>
-                                <th scope="col" class="text-center"><p class="m-0"><i class="fas fa-eye"></i></p>Publicado</th>
-                                <th scope="col" class="text-center"><p class="m-0"><i class="fas fa-tasks"></i></p>Opciones</th>
+                                <th scope="col" class="text-center col-1">
+                                    <p class="m-0"><i class="fas fa-barcode"></i></i></p>Código
+                                </th>
+                                <th scope="col" class="text-center col-1">
+                                    <p class="m-0"><i class="fas fa-gamepad"></i></p>Nombre
+                                </th>
+                                <th scope="col" class="text-center col-2">
+                                    <p class="m-0"><i class="fas fa-tags"></i></p>Categoría
+                                </th>
+                                <th scope="col" class="text-center col-2">
+                                    <p class="m-0"><i class="fas fa-images"></i></i></p>Imagen
+                                </th>
+                                <th scope="col" class="text-center col-3">
+                                    <p class="m-0"><i class="far fa-comment-dots"></i></p>Descripción
+                                </th>
+                                <th scope="col" class="text-center col-1">
+                                    <p class="m-0"><i class="fas fa-eye"></i></p>Publicado
+                                </th>
+                                <th scope="col" class="text-center col-2">
+                                    <p class="m-0"><i class="fas fa-tasks"></i></p>Opciones
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="text-white" id="table-body">
