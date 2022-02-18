@@ -26,7 +26,7 @@ const countdown = (deadline, elem, finalMessage) => {
         }
     }, 1000);
 };
-countdown("Thu feb 14 2022 22:53:30 GMT-0300", "clock");
+countdown("Thu feb 25 2022 22:53:30 GMT-0300", "clock");
 
 // FIN DE CUENTA REGRESIVA
 
